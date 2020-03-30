@@ -1,16 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `janaka.dev`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Janaka Abeywardhana`,
+      summary: `on technology, leadership, and business.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://janaka.dev/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `janaka_a`,
+      github: `janaka`,
+      instagram: `janaka_a`
     },
   },
+  pathPrefix: '__GATSBY_IPFS_PATH_PREFIX__',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -48,6 +51,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-ipfs',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -60,11 +64,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
+        name: `janaka.dev`,
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#00ffff`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },
