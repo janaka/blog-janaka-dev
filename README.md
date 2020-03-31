@@ -17,9 +17,9 @@ No third-party contributions except content or code bug fixes.
 ### To publish to IPFS manually
 
 - run `yarn build`
-- `cd blof-janaka-dev`
+- `cd blog-janaka-dev`
 - `ipfs add -r public`
-- `ipfs name publish <$CID>` $CID hash for `publish/` from previous step
+- `ipfs name publish $CID` $CID hash for `publish/` from previous step
 
 ### To publish to IPFS using CI/CD
 
