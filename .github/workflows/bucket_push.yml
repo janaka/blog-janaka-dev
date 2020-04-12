@@ -1,24 +1,26 @@
-name: bucket_push
+name: bucket_publish
 on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
-
 jobs:
-  bucket_push:
+  bucket_publish:
+    env:
+      BUCKET_NAME: 'blog-janaka-dev'
     runs-on: ubuntu-latest
-    name: Update a Textile bucket
+    name: Create a Textile Bucket
     steps:
     - name: Checkout
       uses: actions/checkout@v1
+    - name: Build Gatsby Site
+      uses: jzweifel/gatsby-cli-github-action@master
+      with:
+        gatsby-arg: build --prefix-paths
     - name: Bucket push action
       id: push
       uses: textileio/github-action-bucket-push@master
       with:
-        bucket-name: 'blog-janaka-dev'
+        bucket-name: '${{ env.BUCKET_NAME }}'
         path: 'public/*'
         token: ${{ secrets.TEXTILE_AUTH_TOKEN }}
     - name: Get the output CID
