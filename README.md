@@ -1,6 +1,6 @@
 # [janaka.dev](janaka.dev)
 
-Personal blog by Janaka Abeywardhana.
+Personal blog by Janaka Abeywardhana. Notes and thoughts on software tech and product development.
 
 Forked from [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog).
 Help and inspiration from [overreacted.io by Dan Abramov](https://github.com/gaearon/overreacted.io).

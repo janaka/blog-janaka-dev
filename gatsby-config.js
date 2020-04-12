@@ -65,7 +65,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `janaka.dev`,
-        short_name: `GatsbyJS`,
+        short_name: `janaka.dev`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#00ffff`,
