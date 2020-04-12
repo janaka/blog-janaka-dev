@@ -16,19 +16,24 @@ No third-party contributions except content or code bug fixes.
 
 ### To publish to IPFS manually from local
 
-This is not the preferred option. 
+This is not the preferred option.
 
 - `yarn build`
-  Note: This command wraps build parameters. We are publishing to IPFS and need to use a plugin to make a Gatsby site compatible.
+  Note: This command wraps `gatsby build --prefix-paths`. We are publishing to IPFS which needs relative paths. Gatsby doesn't support relative paths out of the box. So we use a plugin to make a Gatsby site IPFS compatible.
 - `cd blog-janaka-dev`
 - `ipfs add -r public`
 - `ipfs name publish $CID` $CID hash for `publish/` from previous step
 
 ### To publish to IPFS using CI/CD
 
-TODO
+- Creating a branch PR against master will publish a temp preview. See the GH action output for the temp preview URL.
+- While the branch PR is up, each push to the branch should update the preview.
+- Merging the branch PR to master will update the production version.
+- Pushing directly to master will also update the production version.
 
 ### How to setting up CI/CD using textile.io
+
+TODO: move the following to a separate doc and link from here.
 
 #### Install textile.io cli
 

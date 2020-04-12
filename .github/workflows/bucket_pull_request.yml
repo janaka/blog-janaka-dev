@@ -1,11 +1,12 @@
-#publish when push directly to master or PR merged. 
-name: bucket_publish
+# create temp preview when PR is opened aginst master
+# the bucket_remove action will delete the temp preview when the PR merged/closed.
+name: bucket_pull_request
 on:
-  push:
+  pull_request:
     branches:
       - master
 jobs:
-  bucket_publish:
+  bucket_pull_request:
     env:
       BUCKET_NAME: 'blog-janaka-dev'
     runs-on: ubuntu-latest
@@ -21,7 +22,7 @@ jobs:
       id: push
       uses: textileio/github-action-bucket-push@master
       with:
-        bucket-name: '${{ env.BUCKET_NAME }}'
+        bucket-name: '${{ env.BUCKET_NAME }}-${{ github.event.pull_request.id }}'
         path: 'public/*'
         token: ${{ secrets.TEXTILE_AUTH_TOKEN }}
     - name: Get the output CID
