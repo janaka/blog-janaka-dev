@@ -11,7 +11,7 @@ jobs:
     env:
       BUCKET_NAME: 'blog-janaka-dev'
     runs-on: ubuntu-latest
-    name: Create a Textile Bucket
+    name: Create a Textile Bucket (PR)
     steps:
     - name: Checkout
       uses: actions/checkout@v1
