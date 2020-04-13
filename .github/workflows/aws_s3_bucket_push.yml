@@ -1,4 +1,4 @@
-name: Upload S3 Website Bucket
+name: Deploy Website (S3 Hosting)
 
 on:
   push:
@@ -8,15 +8,17 @@ on:
 
 jobs:
   deploy:
+    name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name:  Checkout Repo
       uses: actions/checkout@master
     - name: Build Gatsby Site
       uses: jzweifel/gatsby-cli-github-action@master
       with:
         gatsby-arg: build --prefix-paths # using ipfs plugin
-    - uses: jakejarvis/s3-sync-action@master
+    - name: Sync S3 Bucket
+      uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --follow-symlinks --delete
       env:

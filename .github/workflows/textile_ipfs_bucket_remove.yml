@@ -1,11 +1,12 @@
 # remove temp preview bucket when the PR is merged/closed
-name: bucket_remove
+name: Remove Temp Textile IPFS Bucket
 on:
   pull_request:
     types: ['closed']
 
 jobs:
   bucket_remove:
+    name: Clean-up Temp Bucket
     env:
       BUCKET_NAME: 'blog-janaka-dev'
     runs-on: ubuntu-latest
