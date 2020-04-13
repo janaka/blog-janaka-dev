@@ -56,6 +56,12 @@ In each of those files, change the value for `BUCKET_NAME` from `'gatsby-ipfs-bl
 |------|-------|----------|
 | BUCKET_NAME | `blog-janaka-dev` | A globally unique name for your blog, containing no spaces or special characters |
 
-refs:
+## Create custom IPFS key
+
+- create custome key `ipfs key gen --type=rsa -size=2048 blog-janaka-dev`
+  Should return a `$PEER_ID`
+- Create TLS cert on CloudFlare
+
+## refs
 [](https://blog.textile.io/ethden-using-ci-to-publish-your-webpage-using-ipfs-and-textile-buckets/)
 [](https://github.com/textileio/gatsby-ipfs-blog/blob/master/README.md)

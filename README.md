@@ -24,6 +24,7 @@ This is not the preferred option.
 - `ipfs add -r public`
 - (One off step) create custome key `ipfs key gen --type=rsa -size=2048 blog-janaka-dev`
   Should return a `$PEER_ID`
+- (one off step) create TLS cert?
 - `ipfs name publish --key=blog-janaka-dev $CID` $CID is the content ID from the add step
   Should return `Published to $PEER_ID: /ipfs/$CID`
 
