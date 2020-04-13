@@ -51,7 +51,8 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-ipfs',
+    `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-ipfs`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

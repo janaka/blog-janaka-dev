@@ -23,6 +23,9 @@ Wordpress2016.overrideThemeStyles = () => ({
   'p code': {
     fontSize: '1rem',
   },
+  'p, div': {
+    color: 'var(--textNormal)'
+  },
   // TODO: why tho
   'h1 code, h2 code, h3 code, h4 code, h5 code, h6 code': {
     fontSize: 'inherit',

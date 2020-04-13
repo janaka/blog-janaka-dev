@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { rhythm, scale } from "../utils/typography"
 
 const Layout = ({ location, title, children }) => {
@@ -19,7 +19,8 @@ const Layout = ({ location, title, children }) => {
         <Link
           style={{
             boxShadow: `none`,
-            color: `inherit`,
+            textDecoration: 'none',
+            color: 'var(--textTitle)',
           }}
           to={`/`}
         >
@@ -38,7 +39,8 @@ const Layout = ({ location, title, children }) => {
         <Link
           style={{
             boxShadow: `none`,
-            color: `inherit`,
+            textDecoration: 'none',
+            color: 'var(--turquoise)',
           }}
           to={`/`}
         >
@@ -56,7 +58,20 @@ const Layout = ({ location, title, children }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <header>{header}</header>
+      <header>{header}
+      <ThemeToggler>
+        {({ theme, toggleTheme }) => (
+          <label>
+            <input
+              type="checkbox"
+              onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+              checked={theme === 'dark'}
+            />{' '}
+            Dark mode
+          </label>
+        )}
+      </ThemeToggler>
+      </header>
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
