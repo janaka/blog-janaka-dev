@@ -16,75 +16,28 @@ No third-party contributions except content or code bug fixes.
 
 ### To publish to IPFS manually from local
 
-This is not the preferred option. 
+This is not the preferred option.
 
 - `yarn build`
-  Note: This command wraps build parameters. We are publishing to IPFS and need to use a plugin to make a Gatsby site compatible.
+  Note: This command wraps `gatsby build --prefix-paths`. We are publishing to IPFS which needs relative paths. Gatsby doesn't support relative paths out of the box. So we use a plugin to make a Gatsby site IPFS compatible.
 - `cd blog-janaka-dev`
 - `ipfs add -r public`
-- `ipfs name publish $CID` $CID hash for `publish/` from previous step
+- (One off step) create custome key `ipfs key gen --type=rsa -size=2048 blog-janaka-dev`
+  Should return a `$PEER_ID`
+- (one off step) create TLS cert?
+- `ipfs name publish --key=blog-janaka-dev $CID` $CID is the content ID from the add step
+  Should return `Published to $PEER_ID: /ipfs/$CID`
+
+refs: [](https://docs-beta.ipfs.io/how-to/host-single-page-site/#create-your-site)
 
 ### To publish to IPFS using CI/CD
 
-TODO
+- Creating a branch PR against master will publish a temp preview. See the GH action output for the temp preview URL.
+- While the branch PR is up, each push to the branch should update the preview.
+- Merging the branch PR to master will update the production version.
+- Pushing directly to master will also update the production version.
 
-### How to setting up CI/CD using textile.io
+## Setup
 
-#### Install textile.io cli
-
-- Download and extract binary from [](https://github.com/textileio/textile/releases)
-- `cd <expanded folder name>` > `./install`
-- `textile --help` should return
-
-#### Create a Textile login and team
-
-Textile uses passwordless login for all users, giving them remote IPFS pinning for their projects.
-
-- `textile login`
-  follow the instructions.
-
-- `textile whoami`
-  Should now show you your account. 
-  
-If you think you'll want to collaborate with others, you should create a team and then enter your team before creating projects and buckets.
-
-- `textile team add <NAME>`
-- `textile switch`
-
-#### Initialize a Textile Project
-
-All Buckets are part of Projects. To make Project management easy, you can initialize a Project in the any directory. Then, each time you are working in that directory with Textile, it will know which project it is working with.
-
-- `cd blog-janaka-dev`
-- `textile project init blog-janaka-dev`
-- This will create a file `./.textile/config.yml`. If you are using Git, you should commit this file to your code history.
-
-#### Setup GitHub Variables
-
-1. Go to the `Settings` tab of your new Github repo.
-2. Select the `Secrets` option in the menu.
-3. Add the following new secrets
-
-| NAME | Example | Description|
-|------|-------|----------|
-| TEXTILE_AUTH_TOKEN | `<private textile auth token>` | Your private auth token for Textile. Do not share. You can find it on your local computer in your home dir. E.g. `cat ~/.textile/auth.yml` |
-| DOMAIN_NAME | `janaka.dev` | (OPTIONAL) The raw domain you want to update on Cloudflare |
-| SUBDOMAIN | `@` | (OPTIONAL) The subdomain on your site currently setup to use DNSLink. A DNSLink must exist for this record for the update to start working. [see here](https://blog.textile.io/ethden-using-ci-to-publish-your-webpage-using-ipfs-and-textile-buckets/). |
-| CLOUDFLARE_TOKEN | `` | (OPTIONAL) Cloudflare token capable of updating your DNS records, [see here](https://blog.textile.io/ethden-using-ci-to-publish-your-webpage-using-ipfs-and-textile-buckets/). |
-| CLOUDFLARE_ZONE_ID | `` | (OPTIONAL) Zone Id of your domain on Cloudflare, [see here](https://blog.textile.io/ethden-using-ci-to-publish-your-webpage-using-ipfs-and-textile-buckets/). |
-
-#### Update your GitHub Actions
-
-There is a value in each of the four workflows you need to update. You can find those files in,
-
-* [.github/workflows/bucket_pull_request.yml](https://github.com/textileio/gatsby-ipfs-blog/blob/master/.github/workflows/bucket_pull_request.yml)
-* [.github/workflows/bucket_remove.yml](https://github.com/textileio/gatsby-ipfs-blog/blob/master/.github/workflows/bucket_remove.yml)
-* [.github/workflows/bucket_publish.yml](https://github.com/textileio/gatsby-ipfs-blog/blob/master/.github/workflows/bucket_publish.yml)
-* [.github/workflows/update_dnslink.yml](https://github.com/textileio/gatsby-ipfs-blog/blob/master/.github/workflows/update_dnslink.yml)
-  
-In each of those files, change the value for `BUCKET_NAME` from `'gatsby-ipfs-blog'` to your unique bucket name.
-
-| NAME | Example | Description|
-|------|-------|----------|
-| BUCKET_NAME | `blog-janaka-dev` | A globally unique name for your blog, containing no spaces or special characters |
-
+[CI/CD with Github action](./docs/ci-cd-setup.md)
+[DNS](./docs/dns-setup.md)
