@@ -1,6 +1,6 @@
 # create temp preview when PR is opened aginst master
 # the bucket_remove action will delete the temp preview when the PR merged/closed.
-name: Deploy Website on PR (IPFS Hosting)
+name: Deploy Website to IPFS Hosting (Branch PR)
 on:
   pull_request:
     branches:
@@ -11,7 +11,6 @@ jobs:
     env:
       BUCKET_NAME: 'blog-janaka-dev'
     runs-on: ubuntu-latest
-    name: Create a Textile Bucket (PR)
     steps:
     - name: Checkout
       uses: actions/checkout@v1

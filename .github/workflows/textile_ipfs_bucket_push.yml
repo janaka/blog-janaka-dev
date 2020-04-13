@@ -1,5 +1,5 @@
 #publish when push directly to master or PR merged. 
-name: Deploy Website on Push (IPFS Hosting)
+name: Deploy Website to IPFS Hosting (Production)
 on:
   push:
     branches:
@@ -10,7 +10,6 @@ jobs:
     env:
       BUCKET_NAME: 'blog-janaka-dev'
     runs-on: ubuntu-latest
-    name: Create a Textile Bucket (PUSH)
     steps:
     - name: Checkout
       uses: actions/checkout@v1

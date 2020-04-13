@@ -1,5 +1,5 @@
 # remove temp preview bucket when the PR is merged/closed
-name: Remove Temp Textile IPFS Bucket
+name: Remove Temp Textile IPFS Bucket (Branch PR)
 on:
   pull_request:
     types: ['closed']
