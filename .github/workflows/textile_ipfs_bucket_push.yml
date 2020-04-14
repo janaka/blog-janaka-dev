@@ -16,7 +16,7 @@ jobs:
     - name: Build Gatsby Site
       uses: jzweifel/gatsby-cli-github-action@master
       with:
-        gatsby-arg: build --prefix-paths # using ipfs plugin
+        gatsby-arg: build #--prefix-paths # using ipfs plugin
     - name: Bucket push action
       id: push
       uses: textileio/github-action-bucket-push@master

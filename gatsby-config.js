@@ -13,7 +13,6 @@ module.exports = {
       instagram: `janaka_a`
     },
   },
-  pathPrefix: '__GATSBY_IPFS_PATH_PREFIX__',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -52,9 +51,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-dark-mode`,
-    `gatsby-plugin-ipfs`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {resolve: `gatsby-plugin-sharp`,
+     options: {
+      defaultQuality: 91
+     }  
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

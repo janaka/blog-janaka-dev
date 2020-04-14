@@ -16,7 +16,7 @@ jobs:
     - name: Build Gatsby Site
       uses: jzweifel/gatsby-cli-github-action@master
       with:
-        gatsby-arg: build --prefix-paths # using ipfs plugin
+        gatsby-arg: build # using ipfs plugin
     - name: Sync S3 Bucket
       uses: jakejarvis/s3-sync-action@master
       with:
