@@ -22,7 +22,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1
             style={{
               marginTop: rhythm(1),
-              marginBottom: 0,
+              marginBottom: 7,
+              marginLeft: 0,
             }}
           >
             {post.frontmatter.title}
@@ -32,6 +33,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               ...scale(-1 / 5),
               display: `block`,
               marginBottom: rhythm(1),
+              marginLeft: 1,
             }}
           >
             {post.frontmatter.date}
@@ -93,7 +95,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMMM YYYY")
         description
       }
     }
