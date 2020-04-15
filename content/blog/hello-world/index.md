@@ -6,7 +6,7 @@ description: "Hello World! This is my first post hosted on IPFS, the distributed
 
 This is my first post hosted on [IPFS](ipfs.io), the distributed Internet. How exciting!
 
-I wanted an excuse to play with IPFS to learn and thought hosting a blog on IPFS would be a good little project. So over the weekend I had a little hack and here you are. 
+I wanted an excuse to play with IPFS to learn and thought hosting a blog on IPFS would be a good little project. So over the weekend I had a little hack and here you are.
 
 It also gave me an excuse to play with static site generators. I've picked Gatsby. I'm starting simple, using the `Gatsby blog starter` and markdown files.
 
