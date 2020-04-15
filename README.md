@@ -15,7 +15,7 @@ No third-party contributions except for code and content fixes.
 ### To run locally
 
 - run `yarn dev`
-- open [](https://localhost:8000)
+- open [https://localhost:8000](https://localhost:8000)
 
 ### To publish to IPFS manually from local
 
@@ -31,7 +31,7 @@ This is not the preferred option.
 - `ipfs name publish --key=blog-janaka-dev $CID` $CID is the content ID from the add step
   Should return `Published to $PEER_ID: /ipfs/$CID`
 
-refs: [](https://docs-beta.ipfs.io/how-to/host-single-page-site/#create-your-site)
+refs: [https://docs-beta.ipfs.io/how-to/host-single-page-site/#create-your-site](https://docs-beta.ipfs.io/how-to/host-single-page-site/#create-your-site)
 
 ### To publish using CI/CD
 
@@ -42,5 +42,5 @@ refs: [](https://docs-beta.ipfs.io/how-to/host-single-page-site/#create-your-sit
 
 ## Setup
 
-[CI/CD with Github action](./docs/ci-cd-setup.md)
-[DNS](./docs/dns-setup.md)
+- [CI/CD with Github action](./docs/ci-cd-setup.md)
+- [DNS](./docs/dns-setup.md)

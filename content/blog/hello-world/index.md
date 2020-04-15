@@ -4,6 +4,8 @@ date: "2020-03-28T18:31:00.00Z"
 description: "Hello World! This is my first post hosted on IPFS, the distributed Internet"
 ---
 
+Update [15 April 2020]: I've not managed to get IPFS hosting to work reliably yet. Until I do, [https://janaka.dev](https://janaka.dev) is hosted traditionally (web2). A mirror is hosted on IPFS (web3) at [https://ipfs.janaka.dev](https://ipfs.janaka.dev).
+
 This is my first post hosted on [IPFS](ipfs.io), the distributed Internet. How exciting!
 
 I wanted an excuse to play with IPFS to learn and thought hosting a blog on IPFS would be a good little project. So over the weekend I had a little hack and here you are.
