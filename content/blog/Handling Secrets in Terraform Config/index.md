@@ -1,5 +1,5 @@
 ---
-title: "Note: Handling Secrets Correctly in Terraform" Config
+title: "Note: on Handling Secrets Correctly in Terraform Config"
 date: "2020-05-08T12:18:00.00Z"
 description: "How to make sure secrets are secure in Terraform config."
 ---
