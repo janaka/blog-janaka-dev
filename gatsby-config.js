@@ -3,9 +3,9 @@ module.exports = {
     title: `janaka.dev`,
     author: {
       name: `Janaka Abeywardhana`,
-      summary: `Personal notes and thoughts on web technology, software development, and technical product managenement`,
+      summary: `Personal notes and thoughts on web technology, software development, and technical product management`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Personal notes and thoughts on web technology, software development, and technical product management`,
     siteUrl: `https://janaka.dev/`,
     social: {
       twitter: `janaka_a`,
