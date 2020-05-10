@@ -20,7 +20,6 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
           bucketName: process.env.AWS_S3_BUCKET_NAME,
-          region: process.env.AWS_REGION,
           protocol: `https`,
           hostname: `janaka.dev`,
           mergeCachingParams: true,
