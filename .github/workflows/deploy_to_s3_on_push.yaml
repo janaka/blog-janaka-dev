@@ -3,7 +3,7 @@ name: Deploy Website to S3 Hosting
 on:
   push:
     branches:
-    - switch_to_gatsby-plugin-s3
+    - master
 
 jobs:
   deploy:
