@@ -16,6 +16,8 @@ jobs:
       run: yarn install --prod --pure-lockfile
     - name: Build Gatsby Site
       run: yarn build
+      env:
+        AWS_S3_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET }}
     - name: Deploy to S3 (with sync)
       run: yarn deploy
       env:
