@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: `janaka.dev`,
@@ -14,6 +16,18 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+          bucketName: process.env.AWS_S3_BUCKET_NAME,
+          region: process.env.AWS_REGION,
+          protocol: 'https',
+          hostname: 'janaka.dev',
+          mergeCachingParams: true,
+          removeNonexistentObjects: true,
+          parallelLimit: 20
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
