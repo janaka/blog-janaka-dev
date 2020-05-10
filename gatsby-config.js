@@ -3,9 +3,9 @@ module.exports = {
     title: `janaka.dev`,
     author: {
       name: `Janaka Abeywardhana`,
-      summary: `Personal notes and thoughts on web technology, software development, and technical product managenement`,
+      summary: `Personal notes and thoughts on web technology, software development, and technical product management`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Personal notes and thoughts on web technology, software development, and technical product management`,
     siteUrl: `https://janaka.dev/`,
     social: {
       twitter: `janaka_a`,
@@ -60,7 +60,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-7526648-3`,
       },
     },
     `gatsby-plugin-feed`,
