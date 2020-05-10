@@ -5,7 +5,7 @@ module.exports = {
     title: `janaka.dev`,
     author: {
       name: `Janaka Abeywardhana`,
-      summary: `Personal notes and thoughts on web technology, software development, and technical product management`,
+      summary: `1Personal notes and thoughts on web technology, software development, and technical product management`,
     },
     description: `Personal notes and thoughts on web technology, software development, and technical product management`,
     siteUrl: `https://janaka.dev/`,
@@ -19,14 +19,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-          bucketName: `janaka.dev`,
+          bucketName: process.env.AWS_S3_BUCKET_NAME,
+          region: process.env.AWS_REGION,
           protocol: `https`,
           hostname: `janaka.dev`,
-          mergeCachingParams: true,
-          removeNonexistentObjects: true,
-          acl: `BucketCannedACL`,
-          enableS3StaticWebsiteHosting: true,
-          parallelLimit: 20
       },
     },
     {

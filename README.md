@@ -10,19 +10,30 @@ Syntax theme based on [Sarah Drasner's Night Owl](https://github.com/sdras/night
 
 ## Contributions
 
-No third-party contributions except for code and content fixes.
+No third-party contributions except for code and content fixes. PRs welcome.
+
+[Supported languages](https://prismjs.com/#supported-languages) in code blocks
+
+
+### Deploy to IPFS [https://ipfs.janaka.dev](https://ipfs.janaka.dev)
+
+- Push to master on Github triggers the deploy workflow on Fleek.io
+
+### Deploy to traditional hosting [https://janaka.dev](https://janaka.dev)
+
+- Push to master on Github triggers the deploy workflow on Github actions
 
 ### To run locally
 
 - run `yarn dev`
 - open [https://localhost:8000](https://localhost:8000)
 
-### To publish to IPFS manually from local
+### Deploy to IPFS manually from local
 
 This is not the preferred option.
 
 - `yarn build`
-  Note: This command wraps `gatsby build --prefix-paths`. We are publishing to IPFS which needs relative paths. Gatsby doesn't support relative paths out of the box. So we use a plugin to make a Gatsby site IPFS compatible.
+  Note: This command wraps `gatsby build`
 - `cd blog-janaka-dev`
 - `ipfs add -r public`
 - (One off step) create custome key `ipfs key gen --type=rsa -size=2048 blog-janaka-dev`
@@ -33,12 +44,20 @@ This is not the preferred option.
 
 refs: [https://docs-beta.ipfs.io/how-to/host-single-page-site/#create-your-site](https://docs-beta.ipfs.io/how-to/host-single-page-site/#create-your-site)
 
-### To publish using CI/CD
+### Deploy to S3 hosting from local
 
-- Creating a branch PR against master will publish a temp preview. See the GH action output for the temp preview URL.
-- While the branch PR is up, each push to the branch should update the preview.
-- Merging the branch PR to master will update the production version.
-- Pushing directly to master will also update the production version.
+This is not the preferred option. Use this only if local testing of CI/CD is require for troubleshooting
+
+- Add the following to a `.env` file
+
+  ```env
+  AWS_S3_BUCKET_NAME=<bucket name>
+  AWS_REGION=<aws region>
+  AWS_PROFILE=<aws credentials profile name>
+  ```
+
+- `yarn build`
+- `yarn deploy`
 
 ## Setup
 
