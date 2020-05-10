@@ -21,10 +21,12 @@ module.exports = {
       options: {
           bucketName: process.env.AWS_S3_BUCKET_NAME,
           region: process.env.AWS_REGION,
-          protocol: 'https',
-          hostname: 'janaka.dev',
+          protocol: `https`,
+          hostname: `janaka.dev`,
           mergeCachingParams: true,
           removeNonexistentObjects: true,
+          acl: `BucketCannedACL`,
+          enableS3StaticWebsiteHosting: true,
           parallelLimit: 20
       },
     },
