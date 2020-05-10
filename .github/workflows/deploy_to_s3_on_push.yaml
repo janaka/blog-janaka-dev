@@ -19,6 +19,7 @@ jobs:
       env:
         AWS_S3_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET }}
     - name: Deploy to S3 (with sync)
+      run: yarn run env
       run: yarn deploy
       env:
         AWS_S3_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET }}
