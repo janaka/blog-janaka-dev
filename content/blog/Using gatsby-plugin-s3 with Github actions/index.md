@@ -36,9 +36,9 @@ This is a better setup than what I had before. It's more Gatsby tuned and much f
   }
 ```
 
-#### Github Actions workflow (`.github/workflow/deploy_to_S3_on_push.yaml`)
+#### Github Actions workflow
 
-It seems like they haven't figured out policies for all the combinations. See more details in this [GH issue](https://github.com/jariz/gatsby-plugin-s3/issues/39)
+`.github/workflow/deploy_to_S3_on_push.yaml`
 
 ```yaml
 name: Deploy Website to S3 Hosting
@@ -70,6 +70,8 @@ jobs:
 ```
 
 #### IAM policy
+
+It seems like they haven't figured out policies for all the combinations. See more details in this [GH issue](https://github.com/jariz/gatsby-plugin-s3/issues/39)
 
 ```json
 {
