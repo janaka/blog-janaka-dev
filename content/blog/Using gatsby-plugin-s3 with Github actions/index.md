@@ -36,7 +36,7 @@ This is a better setup than what I had before. It's more Gatsby tuned and much f
   }
 ```
 
-#### Github Actions workflow
+#### Github Actions workflow  
 
 `.github/workflow/deploy_to_S3_on_push.yaml`
 
