@@ -1,5 +1,5 @@
 ---
-title: "Using gatsby-plugin-s3 with Github Actions"
+title: "(note) Using gatsby-plugin-s3 with Github Actions"
 date: "2020-05-11T00:36:00.00Z"
 description: "How to configure Gatsby CI/CD with gatsby-plugin-s3 and Github Actions"
 ---
