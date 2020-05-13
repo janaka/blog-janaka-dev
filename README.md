@@ -17,7 +17,7 @@ No third-party contributions except for code and content fixes. PRs welcome.
 
 ### Deploy to IPFS [https://ipfs.janaka.dev](https://ipfs.janaka.dev)
 
-- Push to master on Github triggers the deploy workflow on Fleek.io
+- Push to master on Github triggers the deploy workflow on [fleek.co](fleek.co)
 
 ### Deploy to traditional hosting [https://janaka.dev](https://janaka.dev)
 
