@@ -2,7 +2,7 @@
 
 Personal blog by Janaka Abeywardhana. Thoughts and notes on web technology, software development, and technical product managenement.
 
-The main version at https://janaka.dev is hosted traditionally. A mirror at https://ipfs.janaka.dev is hosted on [IPFS](ipfs.io). A key reason for creating this site and using a static site generator was to host on IPFS as a learning exercise (web3). I've not managed to get IPFS hosting working reliably. So for now I've web2 hosting until I figure it out.
+The main version at https://janaka.dev is hosted traditionally. A mirror at https://ipfs.janaka.dev is hosted on [IPFS](ipfs.io). A key reason for creating this site and using a static site generator was to host on IPFS as a learning exercise (web3). I've not managed to get IPFS hosting working reliably. So for now web2 hosting until I figure it out.
 
 Forked from [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog).
 Help and inspiration from [overreacted.io by Dan Abramov](https://github.com/gaearon/overreacted.io).
