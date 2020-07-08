@@ -1,5 +1,5 @@
 ---
-title: "(Note 10 June 20202) Tracing in .NET and AWS App Mesh with OpenTelemetry"
+title: "(Note 10 June 2020) Tracing in .NET and AWS App Mesh with OpenTelemetry"
 date: "2020-06-10T23:09:00.00Z"
 description: "Tracing in .NET and AWS App Mesh using OpenTelemetry all runing in AWS Fargate."
 ---
