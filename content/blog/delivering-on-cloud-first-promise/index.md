@@ -22,4 +22,4 @@ In everything we do I ask the question “Would our customers care?” “How mu
 
 Celebrate, it's all gone!
 
-Addition 23 Jan 2021: This rack was located in a [Colt](www.colt.net) data centre, Wapping, London, UK.
+Addition 23 Jan 2021: This rack was located in a [Colt](https://www.colt.net) data centre, Wapping, London, UK.
