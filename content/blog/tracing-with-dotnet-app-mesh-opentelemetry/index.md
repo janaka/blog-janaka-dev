@@ -1,7 +1,7 @@
 ---
 title: "(Note 10 June 2020) Tracing in .NET and AWS App Mesh with OpenTelemetry"
 date: "2020-06-10T23:09:00.00Z"
-description: "Tracing in .NET and AWS App Mesh using OpenTelemetry all runing in AWS Fargate."
+description: "Tracing in .NET and AWS App Mesh using OpenTelemetry all running in AWS Fargate."
 ---
 
 As of this writing [OpenTelemetry](opentelemetry.io) is still in beta. There isn't a lot of writing about it yet. Official docs are minimal, especially if you are in .NET Core land. Now throw AWS App Mesh and Fargate into the mix and we are in for a fun ride. Here are notes on what I learnt by messing around with it in a sandbox.
@@ -13,7 +13,7 @@ As of this writing [OpenTelemetry](opentelemetry.io) is still in beta. There isn
 - The pipeline architecture of the collector/agent is really nice. Allows one to config multiple pipelines of receivers, processors, and exporters. This makes it easy to send traces to multiple backends and options for switching out. Makes vendor evaluation easier and cheaper. Without cost should also be low.
 - Agent vs Collector - the naming is poor, they are both collectors by function. The name describes the mode it runs in.
   - Agent: runs next to the app e.g. sidecar. This will be the core collector. See [code repo](https://github.com/open-telemetry/opentelemetry-collector). It supports only vendor agnostic protocols like Zipkin or OTLP (OpenTelemetry Protocol).
-  - Collector: Runs stand-alone and aggregates traces from several agents then sends to a backend like Zipkin (self-hosted) or LightStep (cloud). This will be the collector with vendor protocol contributions. See [code repo](https://github.com/open-telemetry/opentelemetry-collector-contrib). 
+  - Collector: Runs stand-alone and aggregates traces from several agents then sends to a backend like Zipkin (self-hosted) or LightStep (cloud). This will be the collector with vendor protocol contributions. See [code repo](https://github.com/open-telemetry/opentelemetry-collector-contrib).
   - Official docs say "Agent is capable of adding metadata" and "can offer advanced capabilities over the Agent including tail-based sampling". This implies that there are functional differences between the two binaries.
   - See the official explanation [here](https://opentelemetry.io/docs/collector/about/).
 
@@ -27,7 +27,7 @@ The agent + collector setup is [recommended by OTel](https://opentelemetry.io/do
 
 I'll link to the working example source code in the future.
 
-startup.cs for zipkin protocol.
+startup.cs for Zipkin protocol.
 
 This code propagates trace IDs on outbound calls
 
