@@ -1,6 +1,7 @@
 ---
 title: "DevSecOps: Taking Snyk and Github Dependabot for a Test Drive"
 tags: [devsecops, software-security]
+description: "Notes on Snyk vs Github Dependabot"
 date: "2021-09-03T10:48:10"
 ---
 
