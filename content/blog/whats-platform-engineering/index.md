@@ -27,4 +27,4 @@ The above is my current (Oct 2021) best thinking based on experience and observa
 [^1]: [Team Topologies, by Matthew Skelton](https://teamtopologies.com/key-concepts)
 [^2]: [Product vs. Feature Teams, by Marty Cagan, Aug 2019](https://svpg.com/product-vs-feature-teams/)
 [^3]: [Wardley Maps - Evolutionary stages, by Simon Wardley](https://twitter.com/swardley/status/988334146954170368)
-[^4]: [Accelerate: Building and Scaling High Performing Technology Organizations, by Nicole Forsgren, PhD, Jez Humble, and Gene Kim](https://itrevolution.com/accelerate-book/)im](https://itrevolution.com/accelerate-book/)
+[^4]: [Accelerate: Building and Scaling High Performing Technology Organizations, by Nicole Forsgren, PhD, Jez Humble, and Gene Kim](https://itrevolution.com/accelerate-book/)
