@@ -1,6 +1,6 @@
 ---
 title: "What's Platform Engineering?"
-description: "How I thinkg about platform engineering at the momement"
+description: "How I think about platform engineering at the momement"
 tags: "#platform-engineering #platforms #infrsatructure"
 date: 2021-10-27
 lastmodified: 2021-10-27T14:01:47.01Z
